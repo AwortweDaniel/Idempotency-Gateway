@@ -19,7 +19,7 @@ Every payment request must include a unique Idempotency-Key header. The gateway 
 
 
 ## Architecture Diagram
-Client (E-commerce Shop)
+<!-- Client (E-commerce Shop)
           │
           ▼
 POST /process-payment
@@ -29,14 +29,12 @@ Idempotency-Key: UUID
           ▼
 ┌──────────────────────────────┐
 │     Idempotency Gateway      │
-│______________________________│
 │ 1. Validate Header & Body    │
 │ 2. Hash Body (SHA-256)       │
 │ 3. Lookup Key                │
 │                              │
 │ ┌──────────────────────────┐ │
 │ │    IdempotencyStore      │ │
-│ │__________________________│ │
 │ │                          │ │
 │ │ Key Not Found → Process  │ │
 │ │ Key Done → Return Cache  │ │
@@ -51,11 +49,11 @@ Idempotency-Key: UUID
 └──────────────────────────────┘
           │
           ▼
- 201 Created / 422 / 400
+ 201 Created / 422 / 400 -->
 
 
-## Sequence Diagram
-![Sequence Diagram](sequence%20diagram.png)
+## FlowChart Diagram
+![Flowchart Diagram](flowchart.drawio.png)
 
  ## Setup
 
@@ -66,7 +64,7 @@ Idempotency-Key: UUID
 **Install and run**
 
 ```bash
-git clone https://github.com/<github name>/idempotency-gateway.git
+git clone https://github.com/AwortweDaniel/idempotency-gateway.git
 cd idempotency-gateway
 npm install
 npm start
@@ -176,7 +174,7 @@ idempotency-gateway/
 | |-utils.js — body hashing and payment simulation
 | |-routes/
 | | |-payment.js — POST /process-payment  
-| | |-health.js — GET /
+| | |-health.js — GET /health
 |-package.json
 |-.gitignore
 |-README.md
