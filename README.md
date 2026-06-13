@@ -55,7 +55,7 @@ Idempotency-Key: UUID
 
 
 ## Sequence Diagram
-![Sequence Diagram](sequence diagram.png)
+![Sequence Diagram](sequence%20diagram.png)
 
  ## Setup
 
