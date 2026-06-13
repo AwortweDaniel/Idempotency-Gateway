@@ -54,6 +54,8 @@ Idempotency-Key: UUID
  201 Created / 422 / 400
 
 
+## Sequence Diagram
+![Sequence Diagram](sequence diagram.png)
 
  ## Setup
 
@@ -64,7 +66,7 @@ Idempotency-Key: UUID
 **Install and run**
 
 ```bash
-git clone https://github.com/AwortweDaniel/idempotency-gateway.git
+git clone https://github.com/<github name>/idempotency-gateway.git
 cd idempotency-gateway
 npm install
 npm start
@@ -85,7 +87,6 @@ Server runs on `http://localhost:3000` by default.
 | `Idempotency-Key` |   Yes    |     A unique string per payment attempt       |
 
 **Body**
-
 ```json
 {
   "amount": 100,
@@ -179,3 +180,4 @@ idempotency-gateway/
 |-package.json
 |-.gitignore
 |-README.md
+|-sequence diagram.png
