@@ -51,9 +51,7 @@ Idempotency-Key: UUID
           ▼
  201 Created / 422 / 400 -->
 
-
-## FlowChart Diagram
-![Flowchart Diagram](flowchart.drawio.png)
+![System Architecture Diagram](architecture.png)
 
  ## Setup
 
